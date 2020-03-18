@@ -1,0 +1,24 @@
+package com.cms.testRunner;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.java.Scenario;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features = "features",
+		glue = {"com.cms.stepDefination","com.cms.testRunner"},
+		plugin = {"pretty", "html:target/Destination",
+				"json:target/cucumber.json",
+				"junit:target/cucumber.xml",
+				"rerun:target/rerun.txt"},
+		monochrome = true) //,
+		//tags = "@login")
+
+public class TestRunner {
+	
+	public static Scenario scenario;
+	
+}
