@@ -1,5 +1,5 @@
 com\cms\pageObject\admin_post.class
 com\cms\testRunner\TestRunner.class
 com\cms\pageObject\admin_login.class
-com\cms\stepDefination\SteopDennation.class
+com\cms\stepDefination\StepDefination.class
 com\cms\pageObject\admin_dashboard.class

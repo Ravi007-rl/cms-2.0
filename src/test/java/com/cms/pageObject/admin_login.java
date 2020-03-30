@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class admin_login {
-	public static final String login_url = "http://localhost/CMS/Login.php";
+	public static final String login_url = "http://localhost/CMS/admin";
 
 	WebDriver driver;
 	By admin_username = By.id("username");

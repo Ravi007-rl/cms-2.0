@@ -14,8 +14,8 @@ import io.cucumber.junit.CucumberOptions;
 				"json:target/cucumber.json",
 				"junit:target/cucumber.xml",
 				"rerun:target/rerun.txt"},
-		monochrome = true) //,
-		//tags = "@login")
+		monochrome = true,
+		tags = "@total_post")
 
 public class TestRunner {
 	

@@ -1,119 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="215.085">
-<testcase classname="Dashboaed feature" name="verify total post on dashnoard" time="29.247">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
-Then Admin redirected to dashboard page.....................................passed
-Given Admin read total post.................................................passed
-And Admin go to post page...................................................passed
-Then Admin cross verify the post............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="Successful Login with Valid Credentials" time="12.689">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "jazeb" and "1234".........................................passed
-Then Admin redirected to dashboard page.....................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials" time="10.646">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "jazeb" and "12345"........................................passed
-Then Admin redirected to login page.........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials 2" time="19.105">
-<failure message="expected:&lt;...ttp://localhost/CMS/[Login].php&gt; but was:&lt;...ttp://localhost/CMS/[Dashboard].php&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "jazeb" and "1234".........................................passed
-Then Admin redirected to login page.........................................failed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="27.733">
+<testcase classname="Dashboaed feature" name="verify total post on dashnoard" time="27.096">
+<failure message="chrome not reachable&#10;  (Session info: chrome=80.0.3987.149)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'RAVI-PC', ip: '192.168.225.188', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Windows\TEMP\scoped_dir8...}, goog:chromeOptions: {debuggerAddress: localhost:7010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: da3169bd12132d81ef0c4e9db377872c&#10;*** Element info: {Using=id, value=username}" type="org.openqa.selenium.WebDriverException"><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "ravi" and "12345678"......................................failed
+Then Admin redirected to dashboard page.....................................skipped
+Given Admin read total post.................................................skipped
+And Admin go to post page...................................................skipped
+Then Admin cross verify the post............................................skipped
 
 StackTrace:
-org.junit.ComparisonFailure: expected:<...ttp://localhost/CMS/[Login].php> but was:<...ttp://localhost/CMS/[Dashboard].php>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.cms.stepDefination.SteopDennation.admin_redirected_to_login_page(SteopDennation.java:66)
-	at ✽.Admin redirected to login page(file:///C:/QA/cms2/features/Admin_login.feature:20)
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=80.0.3987.149)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RAVI-PC', ip: '192.168.225.188', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Windows\TEMP\scoped_dir8...}, goog:chromeOptions: {debuggerAddress: localhost:7010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: da3169bd12132d81ef0c4e9db377872c
+*** Element info: {Using=id, value=username}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.cms.pageObject.admin_login.admin_username(admin_login.java:20)
+	at com.cms.stepDefination.StepDefination.admin_enters_and(StepDefination.java:52)
+	at ✽.Admin enters "ravi" and "12345678"(file:///C:/QA/cms2/features/Admin_dashboard.feature:6)
 ]]></failure>
-</testcase>
-<testcase classname="Admin Login Action" name="verify trim is working in username" time="11.911">
-<failure message="expected:&lt;...ttp://localhost/CMS/[Dashboard].php&gt; but was:&lt;...ttp://localhost/CMS/[Login].php&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "                       ravi              " and "12345678".passed
-Then Admin redirected to dashboard page.....................................failed
-
-StackTrace:
-org.junit.ComparisonFailure: expected:<...ttp://localhost/CMS/[Dashboard].php> but was:<...ttp://localhost/CMS/[Login].php>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.cms.stepDefination.SteopDennation.admin_redirected_to_dashboard_page(SteopDennation.java:59)
-	at ✽.Admin redirected to dashboard page(file:///C:/QA/cms2/features/Admin_login.feature:26)
-]]></failure>
-</testcase>
-<testcase classname="Admin Login Action" name="verify not enter any detail and click on login" time="14.889">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "" and ""..................................................passed
-Then Admin redirected to login page.........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="verify admin enter username and not enter password" time="14.513">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and ""..............................................passed
-Then Admin redirected to login page.........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="verify admin enter invalid username and enter password" time="16.261">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "rav" and "12345678".......................................passed
-Then Admin redirected to login page.........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="verify admin enter directly url and try to login" time="11.785">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And admin enter url "http://localhost/CMS/Dashboard.php"....................passed
-Then Admin redirected to login page.........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="verify admin login and click on logout and click on back button" time="12.001">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "jazeb" and "1234".........................................passed
-Then Admin redirected to dashboard page.....................................passed
-And Admin click on logout...................................................passed
-And Admin press back button.................................................passed
-Then Admin redirected to login page.........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name" time="13.586">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admins enters Ravi and 12345678.........................................passed
-Then Admin redirected to dashboard page.....................................passed
-Then check welcome message has same Wellcome Lalwani Ravi!..................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 2" time="14.983">
-<failure message="expected:&lt;Wellcome [shubham]!&gt; but was:&lt;Wellcome []!&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
-And Admins enters Shubham and 12345678......................................passed
-Then Admin redirected to dashboard page.....................................passed
-Then check welcome message has same Wellcome shubham!.......................failed
-
-StackTrace:
-org.junit.ComparisonFailure: expected:<Wellcome [shubham]!> but was:<Wellcome []!>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.cms.stepDefination.SteopDennation.check_welcome_message_has_same(SteopDennation.java:96)
-	at ✽.check welcome message has same Wellcome shubham!(file:///C:/QA/cms2/features/Admin_login.feature:66)
-]]></failure>
-</testcase>
-<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 3" time="14.146">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admins enters Ravi and 12345678.........................................passed
-Then Admin redirected to dashboard page.....................................passed
-Then check welcome message has same Wellcome Lalwani Ravi!..................passed
-]]></system-out>
-</testcase>
-<testcase classname="Admin Logout Action" name="verify logout fuctionality" time="18.305">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "Ravi" and "12345678"......................................passed
-Then Admin redirected to dashboard page.....................................passed
-And Admin click on logout...................................................passed
-Then Admin redirected to login page.........................................passed
-]]></system-out>
 </testcase>
 </testsuite>

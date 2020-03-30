@@ -1,5 +1,7 @@
 package com.cms.pageObject;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -74,8 +76,8 @@ public class admin_post {
 		return driver.findElement(Approve_Comments);
 	}
 	
-	public WebElement Total_post() {
-		return (WebElement) driver.findElements(Total_post);
+	public List<WebElement> Total_post() {
+		return  driver.findElements(Total_post);
 	}
 
 }

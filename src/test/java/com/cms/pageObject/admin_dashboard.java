@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 public class admin_dashboard {
 
 	public WebDriver driver;
-	public static final String dashboard_url = "http://localhost/CMS/Dashboard.php";
+	public static final String dashboard_url = "http://localhost/CMS/admin/Dashboard.php";
 
 	By logout = By.linkText("Logout");
 	By my_profile = By.linkText("My Profile");

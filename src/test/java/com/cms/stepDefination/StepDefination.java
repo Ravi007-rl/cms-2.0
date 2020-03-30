@@ -1,5 +1,6 @@
 package com.cms.stepDefination;
 
+import java.awt.List;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -24,12 +26,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class SteopDennation {
+public class StepDefination {
 
 	public static WebDriver driver;
 	public admin_login Admin_Loging;
 	public admin_dashboard Admin_Dashboard;
 	public admin_post Admin_Post;
+	public String dashboard_post,post_post;
 	
 	@Before
 	public void before() {
@@ -99,20 +102,21 @@ public class SteopDennation {
 	@Given("^Admin read total post$")
     public void admin_read_total_post() throws Throwable {
         String total_post_dashboard=Admin_Dashboard.Total_post().getText();
-        System.out.println(total_post_dashboard);
+        dashboard_post=total_post_dashboard;
     }
 	
     @And("^Admin go to post page$")
     public void admin_go_to_post_page() throws Throwable {
-        
     	Admin_Dashboard.Posts().click();
     }
     
     @Then("^Admin cross verify the post$")
     public void admin_cross_verify_the_post() throws Throwable {
     	Admin_Post = new admin_post(driver);
-        ArrayList<WebElement> total_post=(ArrayList<WebElement>) driver.findElements(By.tagName("tr"));
-        System.out.println(total_post);
+    	int total_post=Admin_Post.Total_post().size();
+    	total_post=total_post-1;
+    	post_post=Integer.toString(total_post);
+        Assert.assertEquals(dashboard_post, post_post);
     }
 
 	@After
