@@ -11,3 +11,6 @@ Feature: Dashboaed feature
     Given Admin read total post
     And Admin go to post page
     Then Admin cross verify the post
+    
+    
+    

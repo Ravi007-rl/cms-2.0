@@ -30,8 +30,7 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d80.0.3987.149)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027RAVI-PC\u0027, ip: \u0027192.168.225.188\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Windows\\TEMP\\scoped_dir8...}, goog:chromeOptions: {debuggerAddress: localhost:7010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: da3169bd12132d81ef0c4e9db377872c\n*** Element info: {Using\u003did, value\u003dusername}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat com.cms.pageObject.admin_login.admin_username(admin_login.java:20)\r\n\tat com.cms.stepDefination.StepDefination.admin_enters_and(StepDefination.java:52)\r\n\tat ✽.Admin enters \"ravi\" and \"12345678\"(file:///C:/QA/cms2/features/Admin_dashboard.feature:6)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "Admin redirected to dashboard page",
@@ -41,7 +40,7 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "verify total post on dashnoard",
@@ -61,7 +60,7 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_read_total_post()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Admin go to post page",
@@ -71,7 +70,7 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_go_to_post_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Admin cross verify the post",
@@ -81,10 +80,766 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_cross_verify_the_post()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
-  "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d80.0.3987.149)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027RAVI-PC\u0027, ip: \u0027192.168.225.188\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Windows\\TEMP\\scoped_dir8...}, goog:chromeOptions: {debuggerAddress: localhost:7010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: da3169bd12132d81ef0c4e9db377872c\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\r\n\tat com.cms.stepDefination.StepDefination.after(StepDefination.java:127)\r\n",
+  "status": "passed"
+});
+formatter.uri("file:features/Admin_login.feature");
+formatter.feature({
+  "name": "Admin Login Action",
+  "description": "  I want to use this template for my login page testing",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Successful Login with Valid Credentials",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"jazeb\" and \"1234\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Unsuccessful Login with Invalid Credentials",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"jazeb\" and \"12345\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Unsuccessful Login with Invalid Credentials",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"jazeb\" and \"1234\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...localhost/CMS/admin/[index].php\u003e but was:\u003c...localhost/CMS/admin/[Dashboard].php\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination.admin_redirected_to_login_page(StepDefination.java:69)\r\n\tat ✽.Admin redirected to login page(file:///C:/QA/cms2/features/Admin_login.feature:20)\r\n",
   "status": "failed"
+});
+formatter.embedding("image/png", "embedded0.png", "Unsuccessful Login with Invalid Credentials");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "verify trim is working in username",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"                       ravi              \" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...localhost/CMS/admin/[Dashboard].php\u003e but was:\u003c...localhost/CMS/admin/[index].php\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page(StepDefination.java:62)\r\n\tat ✽.Admin redirected to dashboard page(file:///C:/QA/cms2/features/Admin_login.feature:26)\r\n",
+  "status": "failed"
+});
+formatter.embedding("image/png", "embedded1.png", "verify trim is working in username");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "verify not enter any detail and click on login",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"\" and \"\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "verify admin enter username and not enter password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"ravi\" and \"\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "verify admin enter invalid username and enter password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"rav\" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "verify admin enter directly url and try to login",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "admin enter url \"http://localhost/CMS/admin/Dashboard.php\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enter_url(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "verify admin login and click on logout and click on back button",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"jazeb\" and \"1234\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin click on logout",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_click_on_logout()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin press back button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_press_back_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "Verify Admin welcome message with his name",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "Admins enters \u003cusername\u003e and \u003cpassword\u003e",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "check welcome message has same \u003coutput\u003e",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password",
+        "output"
+      ]
+    },
+    {
+      "cells": [
+        "Ravi",
+        "12345678",
+        "Wellcome Lalwani Ravi!"
+      ]
+    },
+    {
+      "cells": [
+        "Shubham",
+        "12345678",
+        "Wellcome shubham!"
+      ]
+    },
+    {
+      "cells": [
+        "Ravi",
+        "12345678",
+        "Wellcome Lalwani Ravi!"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Verify Admin welcome message with his name",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admins enters Ravi and 12345678",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admins_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "check welcome message has same Wellcome Lalwani Ravi!",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.check_welcome_message_has_same(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify Admin welcome message with his name",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admins enters Shubham and 12345678",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admins_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "check welcome message has same Wellcome shubham!",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.check_welcome_message_has_same(java.lang.String)"
+});
+formatter.result({
+  "error_message": "org.junit.ComparisonFailure: expected:\u003cWellcome [shubham]!\u003e but was:\u003cWellcome []!\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination.check_welcome_message_has_same(StepDefination.java:99)\r\n\tat ✽.check welcome message has same Wellcome shubham!(file:///C:/QA/cms2/features/Admin_login.feature:66)\r\n",
+  "status": "failed"
+});
+formatter.embedding("image/png", "embedded2.png", "Verify Admin welcome message with his name");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify Admin welcome message with his name",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admins enters Ravi and 12345678",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admins_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "check welcome message has same Wellcome Lalwani Ravi!",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.check_welcome_message_has_same(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:features/admin_logout.feature");
+formatter.feature({
+  "name": "Admin Logout Action",
+  "description": "  I want to use this template for my logout page testing",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "verify logout fuctionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@logout"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"Ravi\" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin click on logout",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_click_on_logout()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
 });
 });

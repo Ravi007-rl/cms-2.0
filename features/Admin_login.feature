@@ -46,7 +46,7 @@ Feature: Admin Login Action
   @login
   Scenario: verify admin enter directly url and try to login
     Given Admin is on Login Page
-    And admin enter url "http://localhost/CMS/Dashboard.php"
+    And admin enter url "http://localhost/CMS/admin/Dashboard.php"
     Then Admin redirected to login page
 
   @login

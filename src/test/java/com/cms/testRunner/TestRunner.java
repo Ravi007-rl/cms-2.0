@@ -13,9 +13,9 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"pretty", "html:target/Destination",
 				"json:target/cucumber.json",
 				"junit:target/cucumber.xml",
-				"rerun:target/rerun.txt"},
-		monochrome = true,
-		tags = "@total_post")
+				"rerun:target/Failed_test_Cases.txt"},
+		monochrome = true) //,
+		//tags = "@total_post")
 
 public class TestRunner {
 	
