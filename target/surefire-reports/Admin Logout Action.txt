@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: Admin Logout Action
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 367.798 s <<< FAILURE! - in Admin Logout Action
+Admin Login Action.Unsuccessful Login with Invalid Credentials  Time elapsed: 17.603 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...localhost/CMS/admin/[index].php> but was:<...localhost/CMS/admin/[Dashboard].php>
+
+Admin Login Action.verify trim is working in username  Time elapsed: 35.907 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...localhost/CMS/admin/[Dashboard].php> but was:<...localhost/CMS/admin/[index].php>
+
+Admin Login Action.verify not enter any detail and click on login  Time elapsed: 14.559 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: failed to change window state to maximized, current state is minimized
+  (Session info: chrome=81.0.4044.138)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RAVI-PC', ip: '192.168.225.188', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:2987}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5cb4851f3e31904f56e77dadc0679117
+
+Admin Login Action.Verify Admin welcome message with his name  Time elapsed: 31.209 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Wellcome [shubham]!> but was:<Wellcome []!>
+

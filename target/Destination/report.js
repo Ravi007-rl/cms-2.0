@@ -85,6 +85,82 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
+formatter.background({
+  "name": "Admin must be login to run the test on dashboard",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"ravi\" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "verify total Categories on dashnoard",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Admin read total Categories",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_read_total_categories()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin go to Categories page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_go_to_categories_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin cross verify the Categories",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination.admin_cross_verify_the_categories()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 formatter.uri("file:features/Admin_login.feature");
 formatter.feature({
   "name": "Admin Login Action",
@@ -290,7 +366,8 @@ formatter.scenario({
   ]
 });
 formatter.before({
-  "status": "passed"
+  "error_message": "org.openqa.selenium.WebDriverException: unknown error: failed to change window state to maximized, current state is minimized\n  (Session info: chrome\u003d81.0.4044.138)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027RAVI-PC\u0027, ip: \u0027192.168.225.188\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Windows\\TEMP\\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:2987}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 5cb4851f3e31904f56e77dadc0679117\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)\r\n\tat com.cms.stepDefination.StepDefination.before(StepDefination.java:40)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Admin is on Login Page",
@@ -300,7 +377,7 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_is_on_Login_Page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Admin enters \"\" and \"\"",
@@ -310,7 +387,7 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_enters_and(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Admin redirected to login page",
@@ -320,8 +397,9 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination.admin_redirected_to_login_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
+formatter.embedding("image/png", "embedded2.png", "verify not enter any detail and click on login");
 formatter.after({
   "status": "passed"
 });
@@ -710,7 +788,7 @@ formatter.result({
   "error_message": "org.junit.ComparisonFailure: expected:\u003cWellcome [shubham]!\u003e but was:\u003cWellcome []!\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination.check_welcome_message_has_same(StepDefination.java:99)\r\n\tat ✽.check welcome message has same Wellcome shubham!(file:///C:/QA/cms2/features/Admin_login.feature:66)\r\n",
   "status": "failed"
 });
-formatter.embedding("image/png", "embedded2.png", "Verify Admin welcome message with his name");
+formatter.embedding("image/png", "embedded3.png", "Verify Admin welcome message with his name");
 formatter.after({
   "status": "passed"
 });

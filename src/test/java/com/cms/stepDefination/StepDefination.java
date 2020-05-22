@@ -1,20 +1,18 @@
 package com.cms.stepDefination;
 
-import java.awt.List;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.cms.pageObject.admin_common;
 import com.cms.pageObject.admin_dashboard;
 import com.cms.pageObject.admin_login;
 import com.cms.pageObject.admin_post;
@@ -32,8 +30,9 @@ public class StepDefination {
 	public admin_login Admin_Loging;
 	public admin_dashboard Admin_Dashboard;
 	public admin_post Admin_Post;
-	public String dashboard_post,post_post;
-	
+	public admin_common Admin_Common;
+	public String dashboard_post, post_post , dashboard_categories;
+
 	@Before
 	public void before() {
 		System.setProperty("webdriver.chrome.driver", "C:\\QA\\RR\\chromedriver.exe");
@@ -56,6 +55,7 @@ public class StepDefination {
 
 	@Then("Admin redirected to dashboard page")
 	public void admin_redirected_to_dashboard_page() {
+		Admin_Common = new admin_common(driver);
 		Admin_Dashboard = new admin_dashboard(driver);
 		String expected = admin_dashboard.dashboard_url;
 		String actual = driver.getCurrentUrl();
@@ -76,7 +76,7 @@ public class StepDefination {
 
 	@Then("Admin click on logout")
 	public void admin_click_on_logout() {
-		Admin_Dashboard.logout().click();
+		Admin_Common.logout().click();
 	}
 
 	@Then("Admin press back button")
@@ -98,26 +98,42 @@ public class StepDefination {
 		String expected = output;
 		Assert.assertEquals(expected, actual);
 	}
-	
+
 	@Given("^Admin read total post$")
-    public void admin_read_total_post() throws Throwable {
-        String total_post_dashboard=Admin_Dashboard.Total_post().getText();
-        dashboard_post=total_post_dashboard;
-    }
-	
-    @And("^Admin go to post page$")
-    public void admin_go_to_post_page() throws Throwable {
-    	Admin_Dashboard.Posts().click();
-    }
-    
-    @Then("^Admin cross verify the post$")
-    public void admin_cross_verify_the_post() throws Throwable {
-    	Admin_Post = new admin_post(driver);
-    	int total_post=Admin_Post.Total_post().size();
-    	total_post=total_post-1;
-    	post_post=Integer.toString(total_post);
-        Assert.assertEquals(dashboard_post, post_post);
-    }
+	public void admin_read_total_post() throws Throwable {
+		String total_post_dashboard = Admin_Dashboard.Total_post().getText();
+		dashboard_post = total_post_dashboard;
+	}
+
+	@And("^Admin go to post page$")
+	public void admin_go_to_post_page() throws Throwable {
+		Admin_Common.Posts().click();
+	}
+
+	@Then("^Admin cross verify the post$")
+	public void admin_cross_verify_the_post() throws Throwable {
+		Admin_Post = new admin_post(driver);
+		int total_post = Admin_Post.Total_post().size();
+		total_post = total_post - 1;
+		post_post = Integer.toString(total_post);
+		Assert.assertEquals(dashboard_post, post_post);
+	}
+
+	@Given("^Admin read total Categories$")
+	public void admin_read_total_categories() throws Throwable {
+		String total_categories_dashboard = Admin_Dashboard.Total_Categories().getText();
+		dashboard_categories = total_categories_dashboard;
+	}
+
+	@Then("^Admin cross verify the Categories$")
+	public void admin_cross_verify_the_categories() throws Throwable {
+		
+	}
+
+	@And("^Admin go to Categories page$")
+	public void admin_go_to_categories_page() throws Throwable {
+		Admin_Common.Categories().click();
+	}
 
 	@After
 	public void after(Scenario scenario) throws IOException {

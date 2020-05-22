@@ -9,14 +9,6 @@ public class admin_dashboard {
 	public WebDriver driver;
 	public static final String dashboard_url = "http://localhost/CMS/admin/Dashboard.php";
 
-	By logout = By.linkText("Logout");
-	By my_profile = By.linkText("My Profile");
-	By Dashboard = By.linkText("Dashboard");
-	By Posts = By.linkText("Posts");
-	By Categories = By.linkText("Categories");
-	By Manage_Admins = By.linkText("Manage Admins");
-	By Comments = By.linkText("Comments");
-	By Live_Blog = By.linkText("Live Blog");
 	By Add_New_Post = By.linkText(" Add New Post");
 	By Add_New_Category = By.linkText("Add New Category");
 	By Add_New_Admin = By.linkText("Add New Admin");
@@ -29,38 +21,6 @@ public class admin_dashboard {
 
 	public admin_dashboard(WebDriver driver) {
 		this.driver = driver;
-	}
-
-	public WebElement my_profile() {
-		return driver.findElement(my_profile);
-	}
-
-	public WebElement Dashboard() {
-		return driver.findElement(Dashboard);
-	}
-
-	public WebElement Posts() {
-		return driver.findElement(Posts);
-	}
-
-	public WebElement Categories() {
-		return driver.findElement(Categories);
-	}
-
-	public WebElement Manage_Admins() {
-		return driver.findElement(Manage_Admins);
-	}
-
-	public WebElement Comments() {
-		return driver.findElement(Comments);
-	}
-
-	public WebElement Live_Blog() {
-		return driver.findElement(Live_Blog);
-	}
-
-	public WebElement logout() {
-		return driver.findElement(logout);
 	}
 
 	public WebElement Add_New_Post() {
