@@ -4,19 +4,19 @@ Feature: Admin Login Action
   @login
   Scenario: Successful Login with Valid Credentials
     Given Admin is on Login Page
-    And Admin enters "jazeb" and "1234"
+    And Admin enters "Ravi" and "12345678"
     Then Admin redirected to dashboard page
 
   @login
   Scenario: Unsuccessful Login with Invalid Credentials
     Given Admin is on Login Page
-    And Admin enters "jazeb" and "12345"
+    And Admin enters "Ravi" and "12345"
     Then Admin redirected to login page
 
   @login
   Scenario: Unsuccessful Login with Invalid Credentials
     Given Admin is on Login Page
-    And Admin enters "jazeb" and "1234"
+    And Admin enters "Ravi" and "12345678"
     Then Admin redirected to login page
 
   @login
@@ -40,7 +40,7 @@ Feature: Admin Login Action
   @login
   Scenario: verify admin enter invalid username and enter password
     Given Admin is on Login Page
-    And Admin enters "rav" and "12345678"
+    And Admin enters "rav" and "123456789"
     Then Admin redirected to login page
 
   @login
@@ -52,7 +52,7 @@ Feature: Admin Login Action
   @login
   Scenario: verify admin login and click on logout and click on back button
     Given Admin is on Login Page
-    And Admin enters "jazeb" and "1234"
+    And Admin enters "Ravi" and "12345678"
     Then Admin redirected to dashboard page
     And Admin click on logout
     And Admin press back button
@@ -67,6 +67,6 @@ Feature: Admin Login Action
 
     Examples: 
       | username | password | output                 |
-      | Ravi     | 12345678 | Wellcome Lalwani Ravi! |
+      | Ravi     | 12345678 | Wellcome Ravi!         |
       | Shubham  | 12345678 | Wellcome shubham!      |
-      | Ravi     | 12345678 | Wellcome Lalwani Ravi! |
+      | Ravi     | 12345678 | Wellcome Ravi!         |

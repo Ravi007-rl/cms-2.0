@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.cms.pageObject.admin_common;
 import com.cms.pageObject.admin_dashboard;
 import com.cms.pageObject.admin_login;
+import com.cms.pageObject.admin_manage_admins;
 import com.cms.pageObject.admin_post;
 
 import io.cucumber.java.After;
@@ -31,6 +32,7 @@ public class StepDefination {
 	public admin_dashboard Admin_Dashboard;
 	public admin_post Admin_Post;
 	public admin_common Admin_Common;
+	public admin_manage_admins Manage_Admins;
 	public String dashboard_post, post_post , dashboard_categories;
 
 	@Before
@@ -134,6 +136,57 @@ public class StepDefination {
 	public void admin_go_to_categories_page() throws Throwable {
 		Admin_Common.Categories().click();
 	}
+	
+	@And("^Admin goto manage admin page$")
+    public void admin_goto_manage_admin_page() throws Throwable {
+        Manage_Admins = new admin_manage_admins(driver);
+        driver.get(Manage_Admins.manage_admins);
+    }
+	
+	@Given("^Admin click on publish at manage admin page$")
+    public void admin_click_on_publish_at_manage_admin_page() throws Throwable {
+        Manage_Admins.Submit().click();
+    }
+
+    @Then("^validation fire \"([^\"]*)\"$")
+    public void validation_fire_something(String strArg1) throws Throwable {
+        String actual=Manage_Admins.validation().getText();
+        String expected=strArg1;
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Given("^Admin Enter username \"([^\"]*)\"$")
+    public void admin_enter_username_something(String strArg1) throws Throwable {
+        Manage_Admins.Username().sendKeys(strArg1);
+    }
+    
+    @Given("^Admin Enter username \"([^\"]*)\" and name \"([^\"]*)\"$")
+    public void admin_enter_username_something_and_name_something(String strArg1, String strArg2) throws Throwable {
+    	Manage_Admins.Username().sendKeys(strArg1);
+    	Manage_Admins.Name().sendKeys(strArg2);
+    }
+    
+    @Given("^Admin Enter username \"([^\"]*)\" , name \"([^\"]*)\" and password \"([^\"]*)\"$")
+    public void admin_enter_username_something_name_something_and_password_something(String strArg1, String strArg2, String strArg3) throws Throwable {
+    	Manage_Admins.Username().sendKeys(strArg1);
+    	Manage_Admins.Name().sendKeys(strArg2);
+    	Manage_Admins.Password(strArg3);
+    }
+    
+    @Given("^Admin Enter username \"([^\"]*)\" , name \"([^\"]*)\" , password \"([^\"]*)\" and confirm password \"([^\"]*)\"$")
+    public void admin_enter_username_something_name_something_password_something_and_confirm_password_something(String strArg1, String strArg2, String strArg3, String strArg4) throws Throwable {
+    	Manage_Admins.Username().sendKeys(strArg1);
+    	Manage_Admins.Name().sendKeys(strArg2);
+    	Manage_Admins.Password(strArg3);
+    	Manage_Admins.ConfirmPassword(strArg4);
+    }
+    
+    @Then("^success_verification fire \"([^\"]*)\"$")
+    public void successverification_fire_something(String strArg1) throws Throwable {
+    	String actual=Manage_Admins.success_verification().getText()
+        String expected=strArg1;
+        Assert.assertEquals(expected, actual);
+    }
 
 	@After
 	public void after(Scenario scenario) throws IOException {

@@ -17,6 +17,8 @@ public class admin_manage_admins {
 	By Back_To_Dashboard=By.linkText(" Back To Dashboard");
 	By Submit=By.name("Submit");
 	By Admins=By.tagName("tr");
+	By validation = By.cssSelector("div.alert.alert-danger");
+	By success_verification = By.cssSelector("div.alert.alert-success");
 	
 	public admin_manage_admins(WebDriver driver) {
 		this.driver = driver;
@@ -48,8 +50,15 @@ public class admin_manage_admins {
 		return driver.findElement(Submit);
 	}
 	
+	public WebElement validation() {
+		return driver.findElement(validation);
+	}
+	
 	public List<WebElement> Admins() {
 		return  driver.findElements(Admins);
 	}
 
+	public WebElement success_verification() {
+		return driver.findElement(success_verification);
+	}
 }

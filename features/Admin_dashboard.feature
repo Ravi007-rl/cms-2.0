@@ -12,10 +12,10 @@ Feature: Dashboaed feature
     And Admin go to post page
     Then Admin cross verify the post
 
-  Scenario: verify total Categories on dashnoard
-    Given Admin read total Categories
-    And Admin go to Categories page
-    Then Admin cross verify the Categories
+#Scenario: verify total Categories on dashnoard
+   # Given Admin read total Categories
+    #And Admin go to Categories page
+   # Then Admin cross verify the Categories
     
     
     
