@@ -19,6 +19,7 @@ public class admin_manage_admins {
 	By Admins=By.tagName("tr");
 	By validation = By.cssSelector("div.alert.alert-danger");
 	By success_verification = By.cssSelector("div.alert.alert-success");
+	By delete_icon= By.xpath("//tbody[1]//tr[1]//td[6]//a[1]//i[1]");
 	
 	public admin_manage_admins(WebDriver driver) {
 		this.driver = driver;
@@ -60,5 +61,9 @@ public class admin_manage_admins {
 
 	public WebElement success_verification() {
 		return driver.findElement(success_verification);
+	}
+	
+	public WebElement delete_icon() {
+		return driver.findElement(delete_icon);
 	}
 }

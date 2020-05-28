@@ -68,5 +68,5 @@ Feature: Admin Login Action
     Examples: 
       | username | password | output                 |
       | Ravi     | 12345678 | Wellcome Ravi!         |
-      | Shubham  | 12345678 | Wellcome shubham!      |
+      | shubham  | 12345678 | Wellcome !             |
       | Ravi     | 12345678 | Wellcome Ravi!         |

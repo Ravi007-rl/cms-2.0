@@ -14,8 +14,8 @@ import io.cucumber.junit.CucumberOptions;
 				"json:target/cucumber.json",
 				"junit:target/cucumber.xml",
 				"rerun:target/Failed_test_Cases.txt"},
-		monochrome = true,
-		tags = "@login")
+		monochrome = true)//,
+		//tags = "@Manage_admin1")
 
 public class TestRunner {
 	
