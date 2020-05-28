@@ -1,131 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="96.309">
-<testcase classname="Admin Manage admin file validation" name="When Admin not enter any details and click on submit" time="16.103">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="141.64">
+<testcase classname="Admin Login Action" name="Successful Login with Valid Credentials" time="12.884">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
+And Admin enters "Ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
-And Admin goto manage admin page............................................passed
-Given Admin click on publish at manage admin page...........................passed
-Then validation fire "All fields must be filled out"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="When Admin enter only username and click on submit" time="11.937">
+<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials" time="8.677">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
-Then Admin redirected to dashboard page.....................................passed
-And Admin goto manage admin page............................................passed
-Given Admin Enter username "testAdmin"......................................passed
-Given Admin click on publish at manage admin page...........................passed
-Then validation fire "All fields must be filled out"........................passed
+And Admin enters "Ravi" and "12345".........................................passed
+Then Admin redirected to login page.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="When Admin enter username and name and click on submit" time="14.405">
-<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.alert.alert-danger&quot;}&#10;  (Session info: chrome=83.0.4103.61)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'RAVI-PC', ip: '192.168.225.193', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Windows\TEMP\scoped_dir4...}, goog:chromeOptions: {debuggerAddress: localhost:43445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: eb38141eb53a248248a52f1c75af5a92&#10;*** Element info: {Using=css selector, value=div.alert.alert-danger}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
-Then Admin redirected to dashboard page.....................................passed
-And Admin goto manage admin page............................................passed
-Given Admin Enter username "testAdmin" and name "testAdmin".................passed
-Given Admin click on publish at manage admin page...........................passed
-Then validation fire "All fields must be filled out"........................failed
+<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials 2" time="11.285">
+<failure message="expected:&lt;...localhost/CMS/admin/[index].php&gt; but was:&lt;...localhost/CMS/admin/[Dashboard].php&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "Ravi" and "12345678"......................................passed
+Then Admin redirected to login page.........................................failed
 
 StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div.alert.alert-danger"}
-  (Session info: chrome=83.0.4103.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RAVI-PC', ip: '192.168.225.193', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Windows\TEMP\scoped_dir4...}, goog:chromeOptions: {debuggerAddress: localhost:43445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: eb38141eb53a248248a52f1c75af5a92
-*** Element info: {Using=css selector, value=div.alert.alert-danger}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.cms.pageObject.admin_manage_admins.validation(admin_manage_admins.java:54)
-	at com.cms.stepDefination.StepDefination.validation_fire_something(StepDefination.java:153)
-	at ✽.validation fire "All fields must be filled out"(file:///C:/QA/cms2/features/Admin_Manage_Admin.feature:25)
+org.junit.ComparisonFailure: expected:<...localhost/CMS/admin/[index].php> but was:<...localhost/CMS/admin/[Dashboard].php>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.cms.stepDefination.StepDefination.admin_redirected_to_login_page(StepDefination.java:71)
+	at ✽.Admin redirected to login page(file:///C:/QA/cms2/features/Admin_login.feature:20)
 ]]></failure>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="When Admin enter username , name , password and click on submit" time="18.625">
-<failure message="Unresolved compilation problem: &#10;&#9;The method Password() in the type admin_manage_admins is not applicable for the arguments (String)&#10;" type="java.lang.Error"><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
-Then Admin redirected to dashboard page.....................................passed
-And Admin goto manage admin page............................................passed
-Given Admin Enter username "testAdmin" , name "testAdmin" and password "12345678".failed
-Given Admin click on publish at manage admin page...........................skipped
-Then validation fire "Password and Confirm Password should match"...........skipped
+<testcase classname="Admin Login Action" name="verify trim is working in username" time="11.585">
+<failure message="expected:&lt;...localhost/CMS/admin/[Dashboard].php&gt; but was:&lt;...localhost/CMS/admin/[index].php&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "                       ravi              " and "12345678".passed
+Then Admin redirected to dashboard page.....................................failed
 
 StackTrace:
-java.lang.Error: Unresolved compilation problem: 
-	The method Password() in the type admin_manage_admins is not applicable for the arguments (String)
-
-	at com.cms.stepDefination.StepDefination.admin_enter_username_something_name_something_and_password_something(StepDefination.java:173)
-	at ✽.Admin Enter username "testAdmin" , name "testAdmin" and password "12345678"(file:///C:/QA/cms2/features/Admin_Manage_Admin.feature:29)
+org.junit.ComparisonFailure: expected:<...localhost/CMS/admin/[Dashboard].php> but was:<...localhost/CMS/admin/[index].php>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page(StepDefination.java:64)
+	at ✽.Admin redirected to dashboard page(file:///C:/QA/cms2/features/Admin_login.feature:26)
 ]]></failure>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="verify when admin enter diffrent password and confirm password" time="10.38">
-<failure message="Unresolved compilation problems: &#10;&#9;The method Password() in the type admin_manage_admins is not applicable for the arguments (String)&#10;&#9;The method ConfirmPassword() in the type admin_manage_admins is not applicable for the arguments (String)&#10;" type="java.lang.Error"><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
+<testcase classname="Admin Login Action" name="verify not enter any detail and click on login" time="11.885">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "" and ""..................................................passed
+Then Admin redirected to login page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin Login Action" name="verify admin enter username and not enter password" time="8.725">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "ravi" and ""..............................................passed
+Then Admin redirected to login page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin Login Action" name="verify admin enter invalid username and enter password" time="13.891">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "rav" and "123456789"......................................passed
+Then Admin redirected to login page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin Login Action" name="verify admin enter directly url and try to login" time="17.193">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And admin enter url "http://localhost/CMS/admin/Dashboard.php"..............passed
+Then Admin redirected to login page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin Login Action" name="verify admin login and click on logout and click on back button" time="10.115">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "Ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
-And Admin goto manage admin page............................................passed
-Given Admin Enter username "testAdmin" , name "testAdmin" , password "12345678" and confirm password "12345".failed
-Given Admin click on publish at manage admin page...........................skipped
-Then validation fire "Password and Confirm Password should match"...........skipped
+And Admin click on logout...................................................passed
+And Admin press back button.................................................passed
+Then Admin redirected to login page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name" time="9.907">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admins enters Ravi and 12345678.........................................passed
+Then Admin redirected to dashboard page.....................................passed
+Then check welcome message has same Wellcome Ravi!..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 2" time="11.758">
+<failure message="expected:&lt;...localhost/CMS/admin/[Dashboard].php&gt; but was:&lt;...localhost/CMS/admin/[index].php&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
+And Admins enters Shubham and 12345678......................................passed
+Then Admin redirected to dashboard page.....................................failed
+Then check welcome message has same Wellcome shubham!.......................skipped
 
 StackTrace:
-java.lang.Error: Unresolved compilation problems: 
-	The method Password() in the type admin_manage_admins is not applicable for the arguments (String)
-	The method ConfirmPassword() in the type admin_manage_admins is not applicable for the arguments (String)
-
-	at com.cms.stepDefination.StepDefination.admin_enter_username_something_name_something_password_something_and_confirm_password_something(StepDefination.java:180)
-	at ✽.Admin Enter username "testAdmin" , name "testAdmin" , password "12345678" and confirm password "12345"(file:///C:/QA/cms2/features/Admin_Manage_Admin.feature:35)
+org.junit.ComparisonFailure: expected:<...localhost/CMS/admin/[Dashboard].php> but was:<...localhost/CMS/admin/[index].php>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.cms.stepDefination.StepDefination.admin_redirected_to_dashboard_page(StepDefination.java:64)
+	at ✽.Admin redirected to dashboard page(file:///C:/QA/cms2/features/Admin_login.feature:65)
 ]]></failure>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="verify when admin enter already registered username and not enter password" time="11.232">
-<failure message="Unresolved compilation problems: &#10;&#9;The method Password() in the type admin_manage_admins is not applicable for the arguments (String)&#10;&#9;The method ConfirmPassword() in the type admin_manage_admins is not applicable for the arguments (String)&#10;" type="java.lang.Error"><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
+<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 3" time="12.763">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admins enters Ravi and 12345678.........................................passed
 Then Admin redirected to dashboard page.....................................passed
-And Admin goto manage admin page............................................passed
-Given Admin Enter username "shubham" , name "shubham" , password "12345678" and confirm password "12345678".failed
-Given Admin click on publish at manage admin page...........................skipped
-Then verification fire "Username Exists. Try Another One!"..................undefined
-
-StackTrace:
-java.lang.Error: Unresolved compilation problems: 
-	The method Password() in the type admin_manage_admins is not applicable for the arguments (String)
-	The method ConfirmPassword() in the type admin_manage_admins is not applicable for the arguments (String)
-
-	at com.cms.stepDefination.StepDefination.admin_enter_username_something_name_something_password_something_and_confirm_password_something(StepDefination.java:180)
-	at ✽.Admin Enter username "shubham" , name "shubham" , password "12345678" and confirm password "12345678"(file:///C:/QA/cms2/features/Admin_Manage_Admin.feature:41)
-]]></failure>
-</testcase>
-<testcase classname="Admin Manage admin file validation" name="verify when admin enter valid details" time="12.395">
-<failure message="Unresolved compilation problems: &#10;&#9;The method Password() in the type admin_manage_admins is not applicable for the arguments (String)&#10;&#9;The method ConfirmPassword() in the type admin_manage_admins is not applicable for the arguments (String)&#10;" type="java.lang.Error"><![CDATA[Given Admin is on Login Page................................................passed
-And Admin enters "ravi" and "12345678"......................................passed
-Then Admin redirected to dashboard page.....................................passed
-And Admin goto manage admin page............................................passed
-Given Admin Enter username "testAdmin" , name "testAdmin" , password "12345678" and confirm password "12345678".failed
-Given Admin click on publish at manage admin page...........................skipped
-Then success_verification fire "New Admin with the name of testAdmin added Successfully".skipped
-
-StackTrace:
-java.lang.Error: Unresolved compilation problems: 
-	The method Password() in the type admin_manage_admins is not applicable for the arguments (String)
-	The method ConfirmPassword() in the type admin_manage_admins is not applicable for the arguments (String)
-
-	at com.cms.stepDefination.StepDefination.admin_enter_username_something_name_something_password_something_and_confirm_password_something(StepDefination.java:180)
-	at ✽.Admin Enter username "testAdmin" , name "testAdmin" , password "12345678" and confirm password "12345678"(file:///C:/QA/cms2/features/Admin_Manage_Admin.feature:47)
-]]></failure>
+Then check welcome message has same Wellcome Ravi!..........................passed
+]]></system-out>
 </testcase>
 </testsuite>

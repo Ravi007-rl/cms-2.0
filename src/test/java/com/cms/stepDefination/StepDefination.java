@@ -166,7 +166,7 @@ public class StepDefination {
     	Manage_Admins.Name().sendKeys(strArg2);
     }
     
-    @Given("^Admin Enter username \"([^\"]*)\" , name \"([^\"]*)\" and password \"([^\"]*)\"$")
+   /* @Given("^Admin Enter username \"([^\"]*)\" , name \"([^\"]*)\" and password \"([^\"]*)\"$")
     public void admin_enter_username_something_name_something_and_password_something(String strArg1, String strArg2, String strArg3) throws Throwable {
     	Manage_Admins.Username().sendKeys(strArg1);
     	Manage_Admins.Name().sendKeys(strArg2);
@@ -183,10 +183,10 @@ public class StepDefination {
     
     @Then("^success_verification fire \"([^\"]*)\"$")
     public void successverification_fire_something(String strArg1) throws Throwable {
-    	String actual=Manage_Admins.success_verification().getText()
+    	String actual=Manage_Admins.success_verification().getText();
         String expected=strArg1;
         Assert.assertEquals(expected, actual);
-    }
+    }*/
 
 	@After
 	public void after(Scenario scenario) throws IOException {
