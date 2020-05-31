@@ -6,14 +6,14 @@ import org.openqa.selenium.WebDriver;
 import com.cms.pageObject.admin_common;
 import com.cms.pageObject.admin_manage_admins;
 
-import baseDriver.Base;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class StepDefination_Manage_Admin extends Base {
+public class StepDefination_Manage_Admin {
 	
-	public WebDriver driver = Base.driver;
+	public WebDriver driver =StepDefination_Login_Admin.driver;
 	public admin_manage_admins Manage_Admins;
 	public admin_common common;
 	

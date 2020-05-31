@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="23" time="284.134">
-<testcase classname="Admin Manage admin file validation" name="When Admin not enter any details and click on submit" time="13.385">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="27" time="473.66">
+<testcase classname="Admin Manage admin file validation" name="When Admin not enter any details and click on submit" time="24.306">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -9,7 +9,7 @@ Given Admin click on publish at manage admin page...........................pass
 Then validation fire "All fields must be filled out"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="When Admin enter only username and click on submit" time="11.597">
+<testcase classname="Admin Manage admin file validation" name="When Admin enter only username and click on submit" time="30.261">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -19,7 +19,7 @@ Given Admin click on publish at manage admin page...........................pass
 Then validation fire "All fields must be filled out"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="When Admin enter username and name and click on submit" time="11.488">
+<testcase classname="Admin Manage admin file validation" name="When Admin enter username and name and click on submit" time="23.33">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -29,7 +29,7 @@ Given Admin click on publish at manage admin page...........................pass
 Then validation fire "All fields must be filled out"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="When Admin enter username , name , password and click on submit" time="12.194">
+<testcase classname="Admin Manage admin file validation" name="When Admin enter username , name , password and click on submit" time="18.26">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -39,7 +39,7 @@ Given Admin click on publish at manage admin page...........................pass
 Then validation fire "All fields must be filled out"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="verify when admin enter diffrent password and confirm password" time="12.713">
+<testcase classname="Admin Manage admin file validation" name="verify when admin enter diffrent password and confirm password" time="19.06">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -49,7 +49,7 @@ Given Admin click on publish at manage admin page...........................pass
 Then validation fire "Password and Confirm Password should match"...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="verify when admin enter already registered username and not enter password" time="13.106">
+<testcase classname="Admin Manage admin file validation" name="verify when admin enter already registered username and not enter password" time="18.625">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -59,7 +59,7 @@ Given Admin click on publish at manage admin page...........................pass
 Then verification fire "Username Exists. Try Another One!"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="verify when admin enter valid details" time="12.574">
+<testcase classname="Admin Manage admin file validation" name="verify when admin enter valid details" time="23.894">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -69,7 +69,7 @@ Given Admin click on publish at manage admin page...........................pass
 Then success_verification fire "New Admin with the name of testAdmin added Successfully".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="admin login with that details" time="14.046">
+<testcase classname="Admin Manage admin file validation" name="admin login with that details" time="17.221">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -80,7 +80,7 @@ And Admin enters "testAdmin" and "12345678".................................pass
 Then Admin redirected to dashboard page.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Manage admin file validation" name="admin delete that account" time="11.282">
+<testcase classname="Admin Manage admin file validation" name="admin delete that account" time="15.231">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -89,28 +89,32 @@ Given Admin click on delete button..........................................pass
 Then success_verification fire "Admin Deleted Successfully !"...............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Dashboaed feature" name="verify total post on dashnoard" time="17.791">
-<system-out><![CDATA[Given Admin is on Login Page................................................passed
+<testcase classname="Dashboaed feature" name="verify total post on dashnoard" time="18.321">
+<failure message="" type="java.lang.NullPointerException"><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
-Given Admin read total post.................................................passed
-And Admin go to post page...................................................passed
-Then Admin cross verify the post............................................passed
-]]></system-out>
+Given Admin click on publish at manage admin page...........................failed
+Then validation fire "All fields must be filled out"........................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at com.cms.stepDefination.StepDefination_Manage_Admin.admin_click_on_publish_at_manage_admin_page(StepDefination_Manage_Admin.java:28)
+	at ✽.Admin click on publish at manage admin page(file:///C:/QA/cms2/features/Admin_dashboard.feature:11)
+]]></failure>
 </testcase>
-<testcase classname="Admin Login Action" name="Successful Login with Valid Credentials" time="11.607">
+<testcase classname="Admin Login Action" name="Successful Login with Valid Credentials" time="16.641">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "Ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials" time="10.228">
+<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials" time="14.532">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "Ravi" and "12345".........................................passed
 Then Admin redirected to login page.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials 2" time="11.745">
+<testcase classname="Admin Login Action" name="Unsuccessful Login with Invalid Credentials 2" time="18.924">
 <failure message="expected:&lt;...localhost/CMS/admin/[index].php&gt; but was:&lt;...localhost/CMS/admin/[Dashboard].php&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "Ravi" and "12345678"......................................passed
 Then Admin redirected to login page.........................................failed
@@ -119,11 +123,11 @@ StackTrace:
 org.junit.ComparisonFailure: expected:<...localhost/CMS/admin/[index].php> but was:<...localhost/CMS/admin/[Dashboard].php>
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_login_page(StepDefination_Login_Admin.java:73)
+	at com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_login_page(StepDefination_Login_Admin.java:80)
 	at ✽.Admin redirected to login page(file:///C:/QA/cms2/features/Admin_login.feature:20)
 ]]></failure>
 </testcase>
-<testcase classname="Admin Login Action" name="verify trim is working in username" time="12.331">
+<testcase classname="Admin Login Action" name="verify trim is working in username" time="17.454">
 <failure message="expected:&lt;...localhost/CMS/admin/[Dashboard].php&gt; but was:&lt;...localhost/CMS/admin/[index].php&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "                       ravi              " and "12345678".passed
 Then Admin redirected to dashboard page.....................................failed
@@ -132,35 +136,35 @@ StackTrace:
 org.junit.ComparisonFailure: expected:<...localhost/CMS/admin/[Dashboard].php> but was:<...localhost/CMS/admin/[index].php>
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page(StepDefination_Login_Admin.java:66)
+	at com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page(StepDefination_Login_Admin.java:73)
 	at ✽.Admin redirected to dashboard page(file:///C:/QA/cms2/features/Admin_login.feature:26)
 ]]></failure>
 </testcase>
-<testcase classname="Admin Login Action" name="verify not enter any detail and click on login" time="24.364">
+<testcase classname="Admin Login Action" name="verify not enter any detail and click on login" time="17.784">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "" and ""..................................................passed
 Then Admin redirected to login page.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="verify admin enter username and not enter password" time="9.764">
+<testcase classname="Admin Login Action" name="verify admin enter username and not enter password" time="42.946">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "ravi" and ""..............................................passed
 Then Admin redirected to login page.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="verify admin enter invalid username and enter password" time="9.525">
+<testcase classname="Admin Login Action" name="verify admin enter invalid username and enter password" time="12.07">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "rav" and "123456789"......................................passed
 Then Admin redirected to login page.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="verify admin enter directly url and try to login" time="9.396">
+<testcase classname="Admin Login Action" name="verify admin enter directly url and try to login" time="10.299">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And admin enter url "http://localhost/CMS/admin/Dashboard.php"..............passed
 Then Admin redirected to login page.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="verify admin login and click on logout and click on back button" time="10.896">
+<testcase classname="Admin Login Action" name="verify admin login and click on logout and click on back button" time="12.097">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "Ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed
@@ -169,28 +173,64 @@ And Admin press back button.................................................pass
 Then Admin redirected to login page.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name" time="10.405">
+<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name" time="13.242">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admins enters Ravi and 12345678.........................................passed
 Then Admin redirected to dashboard page.....................................passed
 Then check welcome message has same Wellcome Ravi!..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 2" time="11.521">
+<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 2" time="11.206">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admins enters shubham and 12345678......................................passed
 Then Admin redirected to dashboard page.....................................passed
 Then check welcome message has same Wellcome !..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 3" time="10.209">
+<testcase classname="Admin Login Action" name="Verify Admin welcome message with his name 3" time="11.224">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admins enters Ravi and 12345678.........................................passed
 Then Admin redirected to dashboard page.....................................passed
 Then check welcome message has same Wellcome Ravi!..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Admin Logout Action" name="verify logout fuctionality" time="10.993">
+<testcase classname="Categories feature" name="when no data enter and click on publish" time="12.675">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "ravi" and "12345678"......................................passed
+Then Admin redirected to dashboard page.....................................passed
+And Admin goto manage Categories............................................passed
+Given Admin enter no data and click on publish button at Categories page....passed
+Then Validation fire "All fields must be filled out" at Categories page.....passed
+]]></system-out>
+</testcase>
+<testcase classname="Categories feature" name="when enter already available Categories" time="12.568">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "ravi" and "12345678"......................................passed
+Then Admin redirected to dashboard page.....................................passed
+And Admin goto manage Categories............................................passed
+Given Admin enter "Movies" and click on publish button at Categories page...passed
+Then Validation fire "Category already exists. Try Another One!" at Categories page.passed
+]]></system-out>
+</testcase>
+<testcase classname="Categories feature" name="when enter valid data" time="15.325">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "ravi" and "12345678"......................................passed
+Then Admin redirected to dashboard page.....................................passed
+And Admin goto manage Categories............................................passed
+Given Admin enter "test Categories" and click on publish button at Categories page.passed
+Then Validation success fire "Category added Successfully" at Categories page.passed
+]]></system-out>
+</testcase>
+<testcase classname="Categories feature" name="when we delete that Category" time="12.352">
+<system-out><![CDATA[Given Admin is on Login Page................................................passed
+And Admin enters "ravi" and "12345678"......................................passed
+Then Admin redirected to dashboard page.....................................passed
+And Admin goto manage Categories............................................passed
+Given Admin click on delete button at Categories page.......................passed
+Then Validation success fire "Category Deleted Successfully !" at Categories page.passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin Logout Action" name="verify logout fuctionality" time="12.092">
 <system-out><![CDATA[Given Admin is on Login Page................................................passed
 And Admin enters "Ravi" and "12345678"......................................passed
 Then Admin redirected to dashboard page.....................................passed

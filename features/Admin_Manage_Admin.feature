@@ -55,7 +55,7 @@ Feature: Admin Manage admin file validation
     And Admin enters "testAdmin" and "12345678"
     Then Admin redirected to dashboard page
     
-     @Manage_admin1
+    @Manage_admin
   	Scenario: admin delete that account
     Given Admin click on delete button
     Then success_verification fire "Admin Deleted Successfully !"

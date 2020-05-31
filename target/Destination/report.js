@@ -786,7 +786,7 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@Manage_admin1"
+      "name": "@Manage_admin"
     }
   ]
 });
@@ -868,35 +868,27 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "Admin read total post",
+  "name": "Admin click on publish at manage admin page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_read_total_post()"
+  "location": "com.cms.stepDefination.StepDefination_Manage_Admin.admin_click_on_publish_at_manage_admin_page()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.cms.stepDefination.StepDefination_Manage_Admin.admin_click_on_publish_at_manage_admin_page(StepDefination_Manage_Admin.java:28)\r\n\tat ✽.Admin click on publish at manage admin page(file:///C:/QA/cms2/features/Admin_dashboard.feature:11)\r\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "Admin go to post page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_go_to_post_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin cross verify the post",
+  "name": "validation fire \"All fields must be filled out\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_cross_verify_the_post()"
+  "location": "com.cms.stepDefination.StepDefination_Manage_Admin.validation_fire_something(java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
+formatter.embedding("image/png", "embedded0.png", "verify total post on dashnoard");
 formatter.after({
   "status": "passed"
 });
@@ -1039,10 +1031,10 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_login_page()"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c...localhost/CMS/admin/[index].php\u003e but was:\u003c...localhost/CMS/admin/[Dashboard].php\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_login_page(StepDefination_Login_Admin.java:73)\r\n\tat ✽.Admin redirected to login page(file:///C:/QA/cms2/features/Admin_login.feature:20)\r\n",
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...localhost/CMS/admin/[index].php\u003e but was:\u003c...localhost/CMS/admin/[Dashboard].php\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_login_page(StepDefination_Login_Admin.java:80)\r\n\tat ✽.Admin redirected to login page(file:///C:/QA/cms2/features/Admin_login.feature:20)\r\n",
   "status": "failed"
 });
-formatter.embedding("image/png", "embedded0.png", "Unsuccessful Login with Invalid Credentials");
+formatter.embedding("image/png", "embedded1.png", "Unsuccessful Login with Invalid Credentials");
 formatter.after({
   "status": "passed"
 });
@@ -1087,10 +1079,10 @@ formatter.match({
   "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page()"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c...localhost/CMS/admin/[Dashboard].php\u003e but was:\u003c...localhost/CMS/admin/[index].php\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page(StepDefination_Login_Admin.java:66)\r\n\tat ✽.Admin redirected to dashboard page(file:///C:/QA/cms2/features/Admin_login.feature:26)\r\n",
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...localhost/CMS/admin/[Dashboard].php\u003e but was:\u003c...localhost/CMS/admin/[index].php\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page(StepDefination_Login_Admin.java:73)\r\n\tat ✽.Admin redirected to dashboard page(file:///C:/QA/cms2/features/Admin_login.feature:26)\r\n",
   "status": "failed"
 });
-formatter.embedding("image/png", "embedded1.png", "verify trim is working in username");
+formatter.embedding("image/png", "embedded2.png", "verify trim is working in username");
 formatter.after({
   "status": "passed"
 });
@@ -1576,6 +1568,336 @@ formatter.step({
 });
 formatter.match({
   "location": "com.cms.stepDefination.StepDefination_Login_Admin.check_welcome_message_has_same(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:features/admin_Categories.feature");
+formatter.feature({
+  "name": "Categories feature",
+  "description": "  I want to use this template for my Categories testing",
+  "keyword": "Feature"
+});
+formatter.background({
+  "name": "Admin must be login to run the test on dashboard",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"ravi\" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin goto manage Categories",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_goto_manage_categories()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "when no data enter and click on publish",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Categories"
+    }
+  ]
+});
+formatter.step({
+  "name": "Admin enter no data and click on publish button at Categories page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_enter_no_data_and_click_on_publish_button_at_categories_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Validation fire \"All fields must be filled out\" at Categories page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.validation_fire_something_at_categories_page(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Admin must be login to run the test on dashboard",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"ravi\" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin goto manage Categories",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_goto_manage_categories()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "when enter already available Categories",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Categories"
+    }
+  ]
+});
+formatter.step({
+  "name": "Admin enter \"Movies\" and click on publish button at Categories page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_enter_something_and_click_on_publish_button_at_categories_page(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Validation fire \"Category already exists. Try Another One!\" at Categories page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.validation_fire_something_at_categories_page(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Admin must be login to run the test on dashboard",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"ravi\" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin goto manage Categories",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_goto_manage_categories()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "when enter valid data",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Categories"
+    }
+  ]
+});
+formatter.step({
+  "name": "Admin enter \"test Categories\" and click on publish button at Categories page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_enter_something_and_click_on_publish_button_at_categories_page(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Validation success fire \"Category added Successfully\" at Categories page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.validation_success_fire_something_at_categories_page(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Admin must be login to run the test on dashboard",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin is on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_is_on_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin enters \"ravi\" and \"12345678\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_enters_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin redirected to dashboard page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.StepDefination_Login_Admin.admin_redirected_to_dashboard_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Admin goto manage Categories",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_goto_manage_categories()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "when we delete that Category",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Categories"
+    }
+  ]
+});
+formatter.step({
+  "name": "Admin click on delete button at Categories page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.admin_click_on_delete_button_at_Categories_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Validation success fire \"Category Deleted Successfully !\" at Categories page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.cms.stepDefination.stepDefination_Categories.validation_success_fire_something_at_categories_page(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

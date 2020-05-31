@@ -1,0 +1,11 @@
+com\cms\pageObject\admin_category.class
+com\cms\pageObject\admin_common.class
+com\cms\testRunner\TestRunner.class
+com\cms\pageObject\admin_manage_admins.class
+com\cms\pageObject\admin_dashboard.class
+com\cms\stepDefination\StepDefination_Login_Admin.class
+com\cms\testRunner\ReRunner.class
+com\cms\pageObject\admin_post.class
+com\cms\stepDefination\stepDefination_Categories.class
+com\cms\pageObject\admin_login.class
+com\cms\stepDefination\StepDefination_Manage_Admin.class

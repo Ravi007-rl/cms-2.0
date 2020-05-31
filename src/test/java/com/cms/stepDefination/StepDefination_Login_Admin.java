@@ -3,7 +3,7 @@ package com.cms.stepDefination;
 
 import java.io.File;
 import java.io.IOException;
-
+import java.util.Locale.Category;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
@@ -11,16 +11,20 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
 
+import com.cms.pageObject.admin_category;
 import com.cms.pageObject.admin_common;
 import com.cms.pageObject.admin_dashboard;
 import com.cms.pageObject.admin_login;
 import com.cms.pageObject.admin_manage_admins;
 import com.cms.pageObject.admin_post;
 
-import baseDriver.Base;
+
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -28,24 +32,27 @@ import io.cucumber.java.en.Then;
 
 public class StepDefination_Login_Admin {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 	public admin_login Admin_Loging;
 	public admin_dashboard Admin_Dashboard;
 	public admin_post Admin_Post;
 	public admin_common Admin_Common;
 	public admin_manage_admins Manage_Admins;
 	public String dashboard_post, post_post , dashboard_categories;
+	public admin_category Category;
 
 
 	@Before
-	public void befor()
+	public static void before()
 	{
-		driver= Base.getdiver();
+		System.setProperty("webdriver.chrome.driver", "C:\\QA\\RR\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 	}
 
 	@Given("Admin is on Login Page")
 	public void admin_is_on_Login_Page() {
-		
+//		driver=getCurrentDriver();
 		Admin_Loging = new admin_login(driver);
 		driver.get(admin_login.login_url);
 	}
@@ -138,6 +145,18 @@ public class StepDefination_Login_Admin {
 	public void admin_go_to_categories_page() throws Throwable {
 		Admin_Common.Categories().click();
 	}
+	
+//	@And("^Admin goto manage Categories$")
+//    public void admin_goto_manage_categories() throws Throwable {
+//        driver.get(admin_category.Categories_url);
+//        Category=new
+//    }
+	
+	
+	
+	
+	
+
 	
 	
 

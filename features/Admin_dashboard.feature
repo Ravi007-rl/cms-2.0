@@ -8,9 +8,8 @@ Feature: Dashboaed feature
 
   @total_post
   Scenario: verify total post on dashnoard
-    Given Admin read total post
-    And Admin go to post page
-    Then Admin cross verify the post
+    Given Admin click on publish at manage admin page
+    Then validation fire "All fields must be filled out"
 
 #Scenario: verify total Categories on dashnoard
    # Given Admin read total Categories

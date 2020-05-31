@@ -9,13 +9,16 @@ import org.openqa.selenium.WebElement;
 
 public class admin_category {
 	public WebDriver driver;
-	public static final String post_url = "http://localhost/CMS/admin/Categories.php";
+	public static final String Categories_url = "http://localhost/CMS/admin/Categories.php";
 	
 	
-	By Title = By.name("title");
+	By Title = By.id("title");
 	By  Back_To_Dashboard = By.linkText(" Back To Dashboard");
 	By Submit=By.name("Submit");
 	By Categories=By.tagName("tr");
+	By validation = By.cssSelector("div.alert.alert-danger");
+	By success_verification = By.cssSelector("div.alert.alert-success");
+	By delete_icon= By.xpath("//tbody[1]//tr[1]//td[5]//a[1]//i[1]");
 
 	
 	public admin_category(WebDriver driver) {
@@ -38,4 +41,15 @@ public class admin_category {
 		return  driver.findElements(Categories);
 	}
 	
+	public WebElement validation() {
+		return driver.findElement(validation);
+	}
+	
+	public WebElement success_verification() {
+		return driver.findElement(success_verification);
+	}
+	
+	public WebElement delete_icon() {
+		return driver.findElement(delete_icon);
+	}
 }
